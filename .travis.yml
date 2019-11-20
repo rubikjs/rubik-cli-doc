@@ -6,9 +6,9 @@ script:
 deploy:
   provider: pages
   email: fancyboynet@gmail.com
-  skip-cleanup: true
+  skip_cleanup: true
   local_dir: .vuepress/dist
-  github-token: 1f647fe903d97aff0a5f15ef19000e726eaef6c2
-  keep-history: true
+  github_token: a9e317f7b8c78cdb266eef64bd5520658dae7a87
+  keep_history: true
   on:
     branch: master
