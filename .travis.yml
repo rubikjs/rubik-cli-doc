@@ -1,14 +1,15 @@
 language: node_js
 node_js:
-  - lts/*
+- lts/*
 script:
-  - yarn run build
+- yarn run build
 deploy:
   provider: pages
   email: fancyboynet@gmail.com
   skip_cleanup: true
-  local_dir: .vuepress/dist
-  github_token: $GITHUB_TOKEN
+  local_dir: ".vuepress/dist"
+  github_token:
+    secure: vPPaFkXg4PbSS6WfGP6gWlkwoYh5ecfIPBvTjBaJVcGfbI3ePswHXjmfgx7tTBJ0H2QBJ9Q7E0uiQYwCe1nTkICT8Sf+596Fh1NQesLNyRgfBU0uTo39k1yFCNkQrn6NI6hf+OlU1RTbmv4VJbWDE8yY44xwxJZZlLA34N30LCZzLWpoWcXBJA2HHBTDOf4IhTiKBLJOFhoUDwfF/TJMVzHEJLrP8BW2DTRNZF02jcjgf2PvW4eaIK7iltUvbRKQT9tr8FCb8o+tG0x2+7au1rimFIVw4yQ0ARLYAxJP37TgPYgRqbl6f70cNLZRlFXNA9xU52TT1+9/8K9Hr+asvD9eXKwsHctBKa6SZYKXi7ep9848NsALYJU8q2tQdsqhbwwFXm13DXp54OqFZW0PhHy9V/loxeBsYRxBG5w4gTBPkrSaGiSxKxJ72oN2/l329YKJnZy+6JYz1XzDQL+PhqrlbL5fsER41aglMSmpXBSRkYxSu0XLFNtPh3/VyJnBxm7XBoKaE1H/DDdc7jSG+LvZ+xpTW/MJRZr2K9+Gt8y9DNTP2Z1Z0KBjOPFvEJV6vYHnGEWD6FCMPu3FoahxKKj4bT/hO5Usvmzh9feEnzV/UU9CUfLNSJzenT24vdAeWnb0cEah8JeCkgy+vtyg4wHTvVms9CAaWz3LYazlYxk=
   keep_history: true
   on:
     branch: master
