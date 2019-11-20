@@ -8,7 +8,7 @@ deploy:
   email: fancyboynet@gmail.com
   skip_cleanup: true
   local_dir: .vuepress/dist
-  github_token: a9e317f7b8c78cdb266eef64bd5520658dae7a87
+  github_token: $GITHUB_TOKEN
   keep_history: true
   on:
     branch: master
