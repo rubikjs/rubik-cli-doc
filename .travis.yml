@@ -2,9 +2,9 @@ language: node_js
 node_js:
   - lts/*
 install:
-  - npm ci
+  - yarn ci
 script:
-  - npm run build
+  - yarn run build
 deploy:
   provider: pages
   email: fancyboynet@gmail.com
