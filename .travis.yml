@@ -4,7 +4,7 @@ node_js:
 script:
 - yarn run build
 deploy:
-  provider: pages:git
+  provider: pages
   cleanup: true
   local_dir: ".vuepress/dist"
   token:
