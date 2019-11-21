@@ -4,14 +4,12 @@ node_js:
 script:
 - yarn run build
 deploy:
-  provider: pages
-  email: fancyboynet@gmail.com
-  skip_cleanup: true
+  provider: pages:git
+  cleanup: true
   local_dir: ".vuepress/dist"
-  github_token: "$GITHUB_TOKEN"
+  token:
+    secure: ptpCwgW1oXXOhNmr/ldJSzD/IS/6Cp8Q1wU8KANA6qwfRmMpMks76dEA4NGBroiUsbcG6rdUgWWzpuMFjJbtacPxuKhjxHUyN6TA2DG8MP1HrahRvegM+44qsquONT79TL8H2H2WIDxIwD582yxvkbVM5tYo61KKZXpfrOo8YgayPvhEsJ8jaASSc74D5BzniqDekbD94v78YD5M55EetW1LNst/A1PNeYG7ckA23NS6wuhuiVLs2uW2ud00chJ8bS/rvUUUE2uYZJlvrkDkXSsfHSQVM4iLfwP9up7zYwpuSGFBen5614ILXz0he3FA7awTEOkgEY/vm76FV5iB4s+BxPqVTahH2y0KDvZ9WKWyeYf3dgjRnLTzHD7hgzlC2zn1sUTUnVkItwKpXNI46+XPtuF3SinHp6jfI+LZwjVAoxK+METoxsr9vm846IvDzdqiwalS9yvndX5J05AJXwxnSjBzr1/HVJvBjyWsq0DE1jnipjifwhP1ALjjW4wbq40J7jjOniDEwwDjlKVLzJMSlEpFT9c4noGwpPtEraPgret4u4IYoUqKpifsr6sth1ptBZG++/5XignKG3ToxWCsPsqdQLuP4v2UCCPYqFz2mjk0o5BLzmRt4bxI/2uqmwsuHdo2Dh+SQ7KDwR4H3vTqK2XWci7559z8spI3Wlc=
   keep_history: true
+  edge: true
   on:
     branch: master
-env:
-  global:
-    secure: ptnO+XVhPcvHhPFAoyxymWRMbZ0BJObIMhECLKwS+2LANhVQyg0rys9CNL0fC5nCb1lGVmRumCVXKLZiTnwftiSbDw8QHBSMXdjpaiy5n8AYqsusEMEuwFAe4TrIna8X5P4HAHdpjZ2V+zvIKje432/5X9oZuJCTK8kvrxwAkALFcTosvfVa4a1q9U/dGlNIBRP/MwvBS2rw+MmsqXmbaPR3ks1eq6zd9bAjx9VSLFHetnG168O+PzNsq5g93QUgK9Oyp0EK/w0YGJKgFfu724zVEDCp/8ZTspxrTBaRqTCy8L0tEMONgP33KGM/wru2icr/dcdUpXFZ5zUv+AIZLw2mOwoQva5V0RT/44xTP/3k8kgHuGNqKrkCv8rHNcWQEQDM6Pvd4HfJgW8oJblRJ3p7+1HsabER3GMOzxirfefUOAl7c50KLES5wY2tYTI3xdVl+kBN+gRwQEEJ/kxbSnut6g2iBYM1zq/G6ObH0XQKgcIW9TmluDxRHkMsLMd5AwaisHqt+j5EysL4T6d805PpPDNWCNUhMSSFFdwn/FN+yVs7fuiqQPVZvsPCYWXgtX8n5CziJs8tb7HjVBShQ+8YelXleUAgeTWmxQBJ0BE44Bnzz/mmBsgunMg49FwoXjbVazWQPXrpo7R407PN6PNpIvzOgT1VB0pk39lneTs=
