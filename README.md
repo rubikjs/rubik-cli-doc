@@ -8,7 +8,7 @@
 ## 初始化项目
 
 ```bash
-$ npx create-rubik-app my-app
+$ yarn create rubik-app my-app
 ```
 
 ## 命令列表
