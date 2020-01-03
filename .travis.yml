@@ -5,11 +5,9 @@ script:
 - yarn run build
 deploy:
   provider: pages
-  cleanup: false
+  skip_cleanup: false
   local_dir: ".vuepress/dist"
-  token:
-    secure: ptpCwgW1oXXOhNmr/ldJSzD/IS/6Cp8Q1wU8KANA6qwfRmMpMks76dEA4NGBroiUsbcG6rdUgWWzpuMFjJbtacPxuKhjxHUyN6TA2DG8MP1HrahRvegM+44qsquONT79TL8H2H2WIDxIwD582yxvkbVM5tYo61KKZXpfrOo8YgayPvhEsJ8jaASSc74D5BzniqDekbD94v78YD5M55EetW1LNst/A1PNeYG7ckA23NS6wuhuiVLs2uW2ud00chJ8bS/rvUUUE2uYZJlvrkDkXSsfHSQVM4iLfwP9up7zYwpuSGFBen5614ILXz0he3FA7awTEOkgEY/vm76FV5iB4s+BxPqVTahH2y0KDvZ9WKWyeYf3dgjRnLTzHD7hgzlC2zn1sUTUnVkItwKpXNI46+XPtuF3SinHp6jfI+LZwjVAoxK+METoxsr9vm846IvDzdqiwalS9yvndX5J05AJXwxnSjBzr1/HVJvBjyWsq0DE1jnipjifwhP1ALjjW4wbq40J7jjOniDEwwDjlKVLzJMSlEpFT9c4noGwpPtEraPgret4u4IYoUqKpifsr6sth1ptBZG++/5XignKG3ToxWCsPsqdQLuP4v2UCCPYqFz2mjk0o5BLzmRt4bxI/2uqmwsuHdo2Dh+SQ7KDwR4H3vTqK2XWci7559z8spI3Wlc=
+  github-token: $GITHUB_TOKEN
   keep_history: true
-  edge: true
   on:
     branch: master
