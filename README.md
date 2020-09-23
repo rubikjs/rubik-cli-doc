@@ -1,5 +1,12 @@
 # 指南
 
+<p align="center">
+  <a href="https://www.npmjs.com/package/rubik-cli"><img alt="npm" src="https://img.shields.io/npm/v/rubik-cli?color=sucess"></a>
+  <a href="https://standardjs.com/"><img alt="standardjs" src="https://img.shields.io/badge/code%20style-standard-sucess"></a>
+  <a href="http://commitizen.github.io/cz-cli/"><img alt="commitizen" src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg"></a>
+  <a href="https://travis-ci.com/"><img alt="travis" src="https://travis-ci.org/rubikjs/rubik-cli.svg?branch=master"></a>
+</p>
+
 ## 目标
 ::: tip
 快速搭建`稳定，友好，系统化`的web开发框架，方便开发者用一套框架就可以开始`Pure(原生)|Vue|React|Electron|Libraries(类库)`的开发
@@ -39,12 +46,12 @@ $ yarn create rubik-app my-app
 │       │       │       └── ...
 │       │       ├── home
 │       │       
-│       ├── static (will be copied to the dist directory directly)
-│       │       └── jquery
 │       │
 │       │
 │       ├── any-other
 │
+├── static (will be copied to the dist directory directly)
+│      └── jquery
 │
 ├── mock
 │       └── index.js
@@ -136,6 +143,21 @@ module.exports = {
   resolve: { alias: { vue: 'vue/dist/vue.esm.js' } }
 }
 ```
+
+## mode
+模式,可用于区分不同的环境，对应页面`process.env.MODE`变量
+
+```
+rubik serve --mode private // 将往页面注入
+```
+
+```
+if (process.env.MODE === 'private') {
+  CONFIG.PRIVATE = true
+}
+
+```
+
 
 ## 插件
 你也可以自己写插件来扩展现有的命令  
